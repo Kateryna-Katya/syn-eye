@@ -783,3 +783,117 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 .checkbox-text a:hover {
   color: var(--accent-purple);
 }
+/* --- Стилизация юридических страниц (Pages) --- */
+.pages {
+  background-color: var(--bg-dark);
+  padding: 140px 0 100px;
+  min-height: 100vh;
+}
+
+.pages__back {
+  margin-bottom: 40px;
+}
+
+.pages__back a {
+  color: var(--accent-cyan);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pages__back a:hover {
+  color: var(--accent-purple);
+  transform: translateX(-5px);
+}
+
+.pages__content {
+  max-width: 850px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 50px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pages h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.pages h2 {
+  font-size: 1.8rem;
+  margin: 40px 0 20px;
+  color: var(--accent-cyan);
+}
+
+.pages p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.pages__lead {
+  font-size: 1.3rem !important;
+  color: var(--white) !important;
+  border-left: 3px solid var(--accent-purple);
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.pages ul {
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.pages li {
+  color: var(--text-muted);
+  margin-bottom: 15px;
+  position: relative;
+  list-style: none;
+  padding-left: 25px;
+}
+
+.pages li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent-cyan);
+}
+
+.pages strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.pages__link {
+  color: var(--accent-cyan);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.pages__link:hover {
+  color: var(--accent-purple);
+}
+
+/* Адаптив для страниц */
+@media (max-width: 768px) {
+  .pages { padding: 100px 0 60px; }
+  .pages__content { padding: 30px 20px; border-radius: 0; background: none; border: none; }
+  .pages h1 { font-size:1.8rem; }
+}
+.pages__confirmation {
+  margin-top: 50px;
+  padding: 30px;
+  background: rgba(139, 92, 246, 0.1); /* Легкий пурпурный фон */
+  border: 1px dashed var(--accent-purple);
+  border-radius: 20px;
+}
+
+.pages__confirmation p {
+  margin-bottom: 0;
+  color: var(--white);
+  font-style: italic;
+}
