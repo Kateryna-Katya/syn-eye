@@ -897,3 +897,83 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
   color: var(--white);
   font-style: italic;
 }
+/* --- Адаптив Hero-секции --- */
+
+@media (max-width: 992px) {
+  .hero {
+      padding: 120px 0 60px; /* Отступ сверху под хедер */
+      min-height: auto;
+      text-align: center;
+  }
+
+  .hero__container {
+      grid-template-columns: 1fr; /* Переключаем сетку в одну колонку */
+      gap: 40px;
+  }
+
+  .hero__content {
+      order: 1; /* Текст будет первым */
+  }
+
+  .hero__title {
+      font-size: 2.8rem; /* Уменьшаем заголовок для планшетов */
+      line-height: 1.2;
+      margin-bottom: 20px;
+  }
+
+  .hero__text {
+      margin: 0 auto 30px; /* Центрируем текст */
+      font-size: 1.1rem;
+  }
+
+  .hero__actions {
+      justify-content: center; /* Центрируем кнопки */
+      flex-direction: column; /* Кнопки друг под другом */
+      gap: 15px;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+  }
+
+  .hero__actions .btn {
+      width: 100%; /* Кнопки на всю ширину контейнера */
+      text-align: center;
+  }
+
+  .hero__visual {
+      order: 2; /* Визуал под текстом */
+      margin-top: 20px;
+  }
+
+  .hero__image-wrapper {
+      transform: none !important; /* Убираем 3D наклон для мобилок */
+      max-width: 80%;
+      margin: 0 auto;
+  }
+
+  .hero__tech-ring {
+      width: 140%; /* Немного увеличиваем кольцо фона */
+      height: 140%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+      padding: 100px 0 40px;
+  }
+
+  .hero__title {
+      font-size: 2.1rem; /* Финальный размер для маленьких экранов */
+      letter-spacing: -0.5px;
+  }
+
+  .hero__badge {
+      font-size: 0.8rem;
+      padding: 6px 12px;
+  }
+
+  .hero__text {
+      font-size: 1rem;
+      line-height: 1.5;
+  }
+}
